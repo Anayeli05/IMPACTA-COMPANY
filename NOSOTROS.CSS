@@ -1,0 +1,339 @@
+/* ====================================
+   NOSOTROS PAGE STYLES
+   ==================================== */
+
+/* Hero Section */
+.nosotros-hero {
+    background: #000;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nosotros-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.nosotros-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease-out;
+}
+
+.nosotros-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.nosotros-hero-content .highlight {
+    color: #ff0000;
+    position: relative;
+    display: inline-block;
+}
+
+.nosotros-hero-content .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.nosotros-hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #b3b3b3;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.nosotros-features {
+    padding: 80px 5%;
+    background: #000;
+}
+
+.nosotros-features-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.nosotros-feature-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.nosotros-feature-card:hover {
+    background: rgba(255, 0, 0, 0.05);
+    transform: translateY(-5px);
+    border-color: #ff0000;
+}
+
+.nosotros-feature-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease;
+}
+
+.nosotros-feature-card:hover .nosotros-feature-icon {
+    transform: scale(1.05);
+}
+
+.nosotros-feature-icon img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.nosotros-feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.nosotros-feature-card p {
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Stats Section */
+.nosotros-stats {
+    padding: 80px 5%;
+    background: #000;
+    position: relative;
+}
+
+.nosotros-stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+}
+
+.stats-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ff0000;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent, #ff0000, transparent);
+}
+
+/* Banner Section */
+.nosotros-banner {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: transform 0.6s ease;
+}
+
+.nosotros-banner:hover .banner-image {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 0, 0, 0.2) 100%);
+    padding: 40px;
+    text-align: center;
+}
+
+.banner-overlay h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-out;
+}
+
+.banner-overlay p {
+    font-size: 1.3rem;
+    color: #e5e5e5;
+    max-width: 700px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.5;
+        filter: blur(2px);
+    }
+    50% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nosotros-hero {
+        padding: 80px 20px 60px;
+    }
+
+    .nosotros-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .nosotros-hero-content p {
+        font-size: 1rem;
+    }
+
+    .nosotros-features {
+        padding: 60px 5%;
+    }
+
+    .nosotros-features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nosotros-stats {
+        padding: 60px 5%;
+    }
+
+    .stats-grid {
+        gap: 30px;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+    }
+
+    .nosotros-banner {
+        height: 350px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .banner-overlay p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nosotros-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .nosotros-feature-card {
+        padding: 30px 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .banner-overlay h2 {
+        font-size: 1.5rem;
+    }
+}
